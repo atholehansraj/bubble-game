@@ -5,18 +5,22 @@ let start = document.querySelector("#start");
 let reset = document.querySelector("#reset");
 
 let count = 60;
-let scoreCount = 10;
+let scoreCount = 0;
 
 function generatebubbles() {
   let bubbles = document.querySelector(".bubbles-container");
+  bubbles.innerHTML = ""
   let add = "";
   for (let i = 1; i <= 48; i++) {
     let randomnumber = Math.floor(Math.random() * 9 + 1);
-    add += ` <div class="curcle">
-        ${randomnumber}
-        </div>`;
+      let circle = document.createElement("div")
+      circle.setAttribute("class","circle");
+      circle.innerText = randomnumber;
+
+
+      circle.style.backgroundColor = rColor()
+      bubbles.appendChild(circle);
   }
-  bubbles.innerHTML = add;
 }
 generatebubbles();
 
@@ -42,9 +46,9 @@ targets.textContent = getRandomNumber();
 
 let bubbles = document.querySelector(".bubbles-container");
 bubbles.addEventListener("click", (dets) => {
-  targets.textContent = getRandomNumber();
-  if (parseInt(targets.innerHTML) === parseInt(dets.target.innerHTML)) {
-      score.innerHTML = scorefun();
+  if (parseInt(targets.innerText) === Number(dets.target.innerText)) {
+      targets.textContent = getRandomNumber();
+      score.innerText = scorefun();
     //   score.style.backgroundColor = "red";
       generatebubbles();
    }else {
@@ -58,6 +62,7 @@ start.addEventListener("click", function () {
     timer.textContent = count;
     if (count <= 0) {
       clearInterval(answer);
+      alert("Time up...")
       timer.textContent = "time is up";
     }
   }, 1000);
@@ -66,5 +71,7 @@ start.addEventListener("click", function () {
 });
 
 reset.addEventListener("click", function () {
-  answer.clearInterval(answer);
+   clearInterval(answer);
+   timer.textContent = "00";
+
 });

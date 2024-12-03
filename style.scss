@@ -18,23 +18,28 @@ main{
     position: relative;
 
     .main-container{
-        width: 70%;
-        // height: 80%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em;
 
+        .head{
 
+            h1{
+                font-size: 3em;
+            }
+        }
 
         .nav{
-            width: 100%;
+            width: 40%;
             height: 4em;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 3rem;
-            background-color: aqua;
+            padding: 3rem 0;
+            // background-color: aqua;
 
             .target{
                 display: flex;
@@ -42,6 +47,9 @@ main{
                 align-items: center;
                 gap: 1em;
                 font-size: 1.3em;
+                background-color: rgb(170, 115, 115);
+                padding: 0.5em ;
+                border-radius: 0.7em;
             }
             .time{
                 display: flex;
@@ -49,6 +57,9 @@ main{
                 align-items: center;
                 gap: 1em;
                 font-size: 1.3em;
+                background-color: rgb(170, 115, 115);
+                padding: 0.5em;
+                border-radius: 0.7em;
             }
             .score{
                 display: flex;
@@ -56,10 +67,13 @@ main{
                 align-items: center;
                 gap: 1em;
                 font-size: 1.3em;
+                background-color: rgb(170, 115, 115);
+                padding: 0.5em;
+                border-radius: 0.7em;
             }
         }
         .bubbles-container{
-            width: 100%;
+            width: 40%;
             height: 100%;
             padding: 2em;
             background-color: bisque;
@@ -69,11 +83,11 @@ main{
             flex-shrink: 1;
             
             
-            .curcle{
+            .circle{
                 // align-items: center;
                 flex-grow: 1;
-                height: 70px;
-                width: 60px;
+                height: 40px;
+                width: 40px;
                 border-radius: 50%;
                 background-color:cadetblue;
                 display: flex;
