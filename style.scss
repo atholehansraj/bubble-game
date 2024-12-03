@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    // background-color: red; 
+
+    position: relative;
+
+    .main-container{
+        width: 70%;
+        // height: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+
+
+        .nav{
+            width: 100%;
+            height: 4em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem;
+            background-color: aqua;
+
+            .target{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1em;
+                font-size: 1.3em;
+            }
+            .time{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1em;
+                font-size: 1.3em;
+            }
+            .score{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1em;
+                font-size: 1.3em;
+            }
+        }
+        .bubbles-container{
+            width: 100%;
+            height: 100%;
+            padding: 2em;
+            background-color: bisque;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            flex-shrink: 1;
+            
+            
+            .curcle{
+                // align-items: center;
+                flex-grow: 1;
+                height: 70px;
+                width: 60px;
+                border-radius: 50%;
+                background-color:cadetblue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                color: white;
+                font-size: 1.6em;
+                font-weight: 700;
+                // color: rgb(red, green, blue);
+               
+
+            }
+        }
+        .button-div{
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            margin-top: 2em;
+
+            button{
+                padding: 1em;
+                font-size: 1em;
+                border-radius: 1em;
+                font-weight: 600;
+                cursor: pointer;
+
+                &:active{
+                    transform: scale(0.9);
+                }
+            }
+            #start{
+                background-color: rgb(70, 230, 70);
+            }
+            #reset{
+                background-color: rgb(228, 91, 91);
+            }
+
+        }
+    }
+}
