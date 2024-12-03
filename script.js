@@ -63,7 +63,7 @@ start.addEventListener("click", function () {
     if (count <= 0) {
       clearInterval(answer);
       alert("Time up...")
-      timer.textContent = "time is up";
+      timer.textContent = "00";
     }
   }, 1000);
 

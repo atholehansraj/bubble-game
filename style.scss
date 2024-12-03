@@ -46,7 +46,7 @@ main{
                 justify-content: center;
                 align-items: center;
                 gap: 1em;
-                font-size: 1.3em;
+                font-size: 1.2em;
                 background-color: rgb(170, 115, 115);
                 padding: 0.5em ;
                 border-radius: 0.7em;
@@ -56,7 +56,7 @@ main{
                 justify-content: center;
                 align-items: center;
                 gap: 1em;
-                font-size: 1.3em;
+                font-size: 1.2em;
                 background-color: rgb(170, 115, 115);
                 padding: 0.5em;
                 border-radius: 0.7em;
@@ -66,7 +66,7 @@ main{
                 justify-content: center;
                 align-items: center;
                 gap: 1em;
-                font-size: 1.3em;
+                font-size: 1.2em;
                 background-color: rgb(170, 115, 115);
                 padding: 0.5em;
                 border-radius: 0.7em;
@@ -76,7 +76,8 @@ main{
             width: 40%;
             height: 100%;
             padding: 2em;
-            background-color: bisque;
+            border: 2px solid black;
+            border-radius: 1em;
             display: flex;
             flex-wrap: wrap;
             gap: 1.5em;
