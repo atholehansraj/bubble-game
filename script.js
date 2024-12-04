@@ -42,7 +42,7 @@ function getRandomNumber() {
 }
 getRandomNumber();
 
-targets.textContent = getRandomNumber();
+
 
 let bubbles = document.querySelector(".bubbles-container");
 bubbles.addEventListener("click", (dets) => {
@@ -57,6 +57,7 @@ bubbles.addEventListener("click", (dets) => {
 });
 
 start.addEventListener("click", function () {
+  targets.textContent = getRandomNumber();
   let answer = setInterval(function () {
     count--;
     timer.textContent = count;
