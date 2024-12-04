@@ -33,8 +33,12 @@ function rColor() {
   return color;
 }
 
-function scorefun() {
+function scoreincrease() {
   return (scoreCount += 10);
+}
+
+function scoredecri() {
+  return (scoreCount -= 10);
 }
 
 function getRandomNumber() {
@@ -48,7 +52,7 @@ let bubbles = document.querySelector(".bubbles-container");
 bubbles.addEventListener("click", (dets) => {
   if (parseInt(targets.innerText) === Number(dets.target.innerText)) {
       targets.textContent = getRandomNumber();
-      score.innerText = scorefun();
+      score.innerText = scoreincrease();
     //   score.style.backgroundColor = "red";
       generatebubbles();
    }else {
